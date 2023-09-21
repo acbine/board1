@@ -92,10 +92,9 @@ public class BoardController {
 		log.info("------삭제할번호확인-----------"+bno);
 		log.info("------passward확인-----------"+password);
 		
-	//	if(service.remove(bno)) {
-	//		rttr.addFlashAttribute("oper","remove");
-	//		rttr.addFlashAttribute("result",bno);
-	//	}
+		if(password==1234) {
+			service.remove(bno);
+		}
 		return "redirect:/board/list";
 		
 	}
