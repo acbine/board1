@@ -127,5 +127,10 @@ public class BoardController {
 		return"redirect:/board/list";
 	}
 	
+	@PostMapping("/password")
+	public void password() {
+		
+	}
+	
 
 }
