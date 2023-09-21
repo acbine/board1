@@ -12,9 +12,9 @@
 </h1>
 처음 끝페이지 가는것 제작<br>
 게시판 누를시 /board/list 페이지로 이동
-한글나온다
+안녕세계 한글나온다
 
 <a href="/board/list">클릭시 이동 </a>
-<P>  The time on the server is ${serverTime}. </P>
+<P> 이 서버의 현재시간은   ${serverTime}. </P>
 </body>
 </html>
