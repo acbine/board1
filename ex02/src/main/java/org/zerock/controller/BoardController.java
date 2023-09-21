@@ -87,12 +87,15 @@ public class BoardController {
 	}
 	//삭제(글번호 - bno) board/remove (post) <- 입력화면 (get)
 	@PostMapping("/remove")
-	public String remove(Long bno , RedirectAttributes rttr) {
+	public String remove(Long bno , int password, RedirectAttributes rttr) {
 		log.info("삭제 url 요청");
-		if(service.remove(bno)) {
-			rttr.addFlashAttribute("oper","remove");
-			rttr.addFlashAttribute("result",bno);
-		}
+		log.info("------삭제할번호확인-----------"+bno);
+		log.info("------passward확인-----------"+password);
+		
+	//	if(service.remove(bno)) {
+	//		rttr.addFlashAttribute("oper","remove");
+	//		rttr.addFlashAttribute("result",bno);
+	//	}
 		return "redirect:/board/list";
 		
 	}
