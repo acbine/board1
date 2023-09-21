@@ -9,7 +9,7 @@
 <body>
 삭제화면
 삭제할꺼면 비밀번호1234입력
-<form action="" method="post">
+<form action="/board/remove" method="post">
 	<input type="password" name="password">
 	<input type="submit" value="삭제">
 </form>

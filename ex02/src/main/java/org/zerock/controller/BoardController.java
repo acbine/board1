@@ -128,7 +128,9 @@ public class BoardController {
 	}
 	
 	@PostMapping("/password")
-	public void password() {
+	public void password(Long bno ) {
+		log.info("---------삭제할번호----------------"+bno);
+		
 		
 	}
 	
