@@ -1,5 +1,10 @@
 package org.zerock.controller;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -33,8 +38,12 @@ public class BoardController {
 		log.info("ㅋㅋㅋㅋㅋㅋ"+new PageDTO(cri, service.totalcount(cri)));
 		log.info("ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"+new PageDTO(cri, 0));
 		log.info("String 타입ㅇ으"+SearchPageNum);
-	
 		
+		
+		LocalTime LT = LocalTime.now();
+		DateTimeFormatter FM = DateTimeFormatter.ofPattern("HH시 mm분 ss초");
+		String FT = LT.format(FM);
+		model.addAttribute("time" , FT );
 		model.addAttribute("count", service.totalcount(cri));
 		
 		

@@ -21,7 +21,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            게시글 목록 보기( <a href="register">게시글쓰기 </a>)  현재글개수 ${count} 
+                            게시글 목록 보기( <a href="register">게시글쓰기 </a>)  현재글개수 ${count}  시간${time}
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
