@@ -131,8 +131,10 @@ public class BoardController {
 	}
 	
 	@PostMapping("/password")
-	public void password(Long bno ) {
+	public void password(Long bno ,Model model) {
 		log.info("---------삭제할번호----------------"+bno);
+		model.addAttribute("board",service.get(bno));
+		log.info("---------삭제할번호를 모델로보내준것----------------"+bno);
 		
 		
 	}
