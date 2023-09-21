@@ -1,5 +1,7 @@
 package org.zerock.service;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -66,6 +68,15 @@ public class BoardServiceImpl implements BoardService {
 	public void good(Long bno) {
 		mapper.good(bno);
 		log.info("bno값확인"+bno);
+		
+	}
+
+	@Override
+	public String JAVATIME() {
+		LocalTime LT = LocalTime.now();
+		DateTimeFormatter FM = DateTimeFormatter.ofPattern("HH시 mm분 ss초");
+		String FT = LT.format(FM);
+		return FT;
 		
 	}
 

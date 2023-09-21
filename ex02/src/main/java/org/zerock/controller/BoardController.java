@@ -40,10 +40,8 @@ public class BoardController {
 		log.info("String 타입ㅇ으"+SearchPageNum);
 		
 		
-		LocalTime LT = LocalTime.now();
-		DateTimeFormatter FM = DateTimeFormatter.ofPattern("HH시 mm분 ss초");
-		String FT = LT.format(FM);
-		model.addAttribute("time" , FT );
+		
+		model.addAttribute("time" , service.JAVATIME() );
 		model.addAttribute("count", service.totalcount(cri));
 		
 		

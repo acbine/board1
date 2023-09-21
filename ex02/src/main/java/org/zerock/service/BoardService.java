@@ -23,6 +23,8 @@ public interface BoardService {
 	 
 	 //*7 좋아요 객수
 	 void good(Long bno);
+	 
+	 String JAVATIME();
 
 	 
 

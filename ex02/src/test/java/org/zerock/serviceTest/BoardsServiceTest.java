@@ -72,5 +72,12 @@ public class BoardsServiceTest {
 		service.good(2346472L);
 		
 	}
+	
+	@Test
+	public void TestJAVA() {
+		service.JAVATIME();
+		log.info(service.JAVATIME());
+	}
+	
 
 }
